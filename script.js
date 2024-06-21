@@ -5,8 +5,6 @@ const drawScreen = document.querySelector(".draw-screen")
 
 const gridSizeButton = document.querySelector("#grid-size-button");
 
-let gridSize = 0;
-
 function generateSquares(size){
     container.textContent = "";
     for (let i = 0; i < size; i++){
@@ -26,7 +24,16 @@ function generateSquares(size){
 }
 
 gridSizeButton.addEventListener("click", () => {
-    gridSize = +prompt("Number of squares per side: ");
+    let gridSize = +prompt("Number of squares per side (maximum is 100): ");
+    if (gridSize){
+        if (gridSize > 100){
+            gridSize = 100;
+            
+        }
+    } else {
+        gridSize = 16;
+    }
+
     generateSquares(gridSize);
 });
 
@@ -36,6 +43,6 @@ container.addEventListener("mouseover", (elem) => {
     let hoveredSquare = elem.target
 
     if (hoveredSquare.getAttribute("class") == "square"){
-        hoveredSquare.style["background-color"] = "red";
+        hoveredSquare.style["background-color"] = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
     }
 });

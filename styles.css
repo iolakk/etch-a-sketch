@@ -14,13 +14,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: 640px;
+    width: 960px;
 }
 
 .square {
-
     box-sizing: border-box;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 #grid-size-button {

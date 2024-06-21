@@ -1,11 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.draw-screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .container {
     display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 640px;
 }
 
 .square {
-    height: 32px;
-    width: 32px;
 
+    box-sizing: border-box;
     border: 2px solid black;
 }
 
+#grid-size-button {
+    height: 32px;
+    width: 128px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

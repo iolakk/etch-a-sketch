@@ -11,3 +11,12 @@ for (let i = 0; i < 16; i++){
     }
     container.appendChild(row);
 }
+
+container.addEventListener("mouseover", (elem) => {
+    let hoveredSquare = elem.target
+
+    if (hoveredSquare.getAttribute("class") == "square"){
+        hoveredSquare.style["background-color"] = "red";
+    }
+    
+})

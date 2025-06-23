@@ -16,14 +16,14 @@ function colorSquare(target) {
 }
 
 function createSquares(x = 16, y = 16) {
-    for (let i = 1; i <= x; i++) {
+    for (let i = 1; i <= y; i++) {
         // create a column
         const column = document.createElement('div');
         column.classList.add('column');
         squareContainer.appendChild(column);
 
         // create a row
-        for (let i = 1; i <= y; i++) {
+        for (let i = 1; i <= x; i++) {
             const square = document.createElement('div');
             square.classList.add('square');
             column.appendChild(square);

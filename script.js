@@ -43,6 +43,11 @@ function setGridSize() {
     const x = prompt('x:');
     const y = prompt('y:');
 
+    if (x > 100 || y > 100) {
+        alert('Limit is 100');
+        return;
+    }
+
     clearGridContainer();
     createSquares(x, y);
 }

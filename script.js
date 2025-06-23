@@ -3,6 +3,10 @@ const squareContainer = document.querySelector('#square-container');
 // buttons
 const gridSizeButton = document.querySelector('.grid-size');
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
 function clearGridContainer() {
     let square = squareContainer.lastElementChild;
     while (square) {
@@ -12,7 +16,11 @@ function clearGridContainer() {
 }
 
 function colorSquare(target) {
-    target.style['background-color'] = 'red';
+    const r = getRndInteger(0, 255);
+    const g = getRndInteger(0, 255);
+    const b = getRndInteger(0, 255);
+    console.log(r, g, b);
+    target.style['background-color'] = `rgb(${r}, ${g}, ${b})`;
 }
 
 function createSquares(x = 16, y = 16) {

@@ -1,4 +1,6 @@
-#square-container {
+#screen {
+    display: flex;
+    justify-content: center;
 }
 
 .column {

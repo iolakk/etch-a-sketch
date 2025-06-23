@@ -1,0 +1,12 @@
+#square-container {
+}
+
+.column {
+    display: flex;
+}
+
+.square {   
+    border: 2px solid black;
+    width: 16px;
+    height: 16px;
+}

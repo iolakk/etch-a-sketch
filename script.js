@@ -26,8 +26,7 @@ function colorSquare(target) {
     const g = getRndInteger(0, 255);
     const b = getRndInteger(0, 255);
 
-    target.style['background-color'] = `rgb(${r}, ${g}, ${b})`;
-    target.style['opacity'] = opacity;
+    target.style['background-color'] = `rgb(${r}, ${g}, ${b}, ${opacity})`;
     opacity += 0.1;
 }
 

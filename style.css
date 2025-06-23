@@ -3,6 +3,12 @@
     justify-content: center;
 }
 
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 .column {
     display: flex;
 }

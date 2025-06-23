@@ -1,5 +1,16 @@
 const squareContainer = document.querySelector('#square-container');
 
+// buttons
+const gridSizeButton = document.querySelector('.grid-size');
+
+function clearGridContainer() {
+    let square = squareContainer.lastElementChild;
+    while (square) {
+        squareContainer.removeChild(square);
+        square = squareContainer.lastElementChild;
+    }
+}
+
 function colorSquare(target) {
     target.style['background-color'] = 'red';
 }
@@ -23,9 +34,19 @@ function createSquares(x = 16, y = 16) {
                 to the colorSquare() function
                 */
                 colorSquare(e.target);
-            })
+            });
         }
     }
 }
+
+function setGridSize() {
+    const x = prompt('x:');
+    const y = prompt('y:');
+
+    clearGridContainer();
+    createSquares(x, y);
+}
+
+gridSizeButton.addEventListener('click', setGridSize);
 
 createSquares();

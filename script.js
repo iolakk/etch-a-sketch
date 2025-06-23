@@ -3,6 +3,8 @@ const squareContainer = document.querySelector('#square-container');
 // buttons
 const gridSizeButton = document.querySelector('.grid-size');
 
+let opacity = 1;
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -16,11 +18,17 @@ function clearGridContainer() {
 }
 
 function colorSquare(target) {
+    if (opacity > 1) {
+        opacity = 0;
+    }
+
     const r = getRndInteger(0, 255);
     const g = getRndInteger(0, 255);
     const b = getRndInteger(0, 255);
-    console.log(r, g, b);
+
     target.style['background-color'] = `rgb(${r}, ${g}, ${b})`;
+    target.style['opacity'] = opacity;
+    opacity += 0.1;
 }
 
 function createSquares(x = 16, y = 16) {
